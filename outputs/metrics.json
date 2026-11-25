@@ -1,0 +1,385 @@
+{
+ "n_perf": 1223,
+ "perf_n": {
+  "Deraah": 543,
+  "Assaf": 115,
+  "Al Majed Oud": 64,
+  "Ibraq (Ibrahim Al Qurashi)": 55,
+  "Rasasi": 174,
+  "Swiss Arabian": 63,
+  "Ajmal": 96,
+  "Arabian Oud": 113
+ },
+ "ppm_n": {
+  "Deraah": 534,
+  "Assaf": 104,
+  "Al Majed Oud": 64,
+  "Ibraq (Ibrahim Al Qurashi)": 52,
+  "Rasasi": 170,
+  "Swiss Arabian": 11,
+  "Ajmal": 69,
+  "Arabian Oud": 110
+ },
+ "ppm": {
+  "Deraah": {
+   "med": 1.19,
+   "p25": 0.93,
+   "p75": 1.69
+  },
+  "Assaf": {
+   "med": 0.95,
+   "p25": 0.59,
+   "p75": 1.11
+  },
+  "Al Majed Oud": {
+   "med": 1.18,
+   "p25": 0.87,
+   "p75": 1.96
+  },
+  "Ibraq (Ibrahim Al Qurashi)": {
+   "med": 1.47,
+   "p25": 1.07,
+   "p75": 1.53
+  },
+  "Rasasi": {
+   "med": 1.72,
+   "p25": 0.96,
+   "p75": 2.84
+  },
+  "Swiss Arabian": {
+   "med": 2.4,
+   "p25": 1.8,
+   "p75": 3.25
+  },
+  "Ajmal": {
+   "med": 2.3,
+   "p25": 1.8,
+   "p75": 3.83
+  },
+  "Arabian Oud": {
+   "med": 2.65,
+   "p25": 1.15,
+   "p75": 4.18
+  }
+ },
+ "eff_ppm": {
+  "Deraah": 1.19,
+  "Assaf": 0.66,
+  "Al Majed Oud": 1.18,
+  "Ibraq (Ibrahim Al Qurashi)": 1.47,
+  "Rasasi": 1.23,
+  "Swiss Arabian": 2.4,
+  "Ajmal": 1.88,
+  "Arabian Oud": 2.65
+ },
+ "list_ppm": {
+  "Deraah": 2.82,
+  "Assaf": 1.97,
+  "Al Majed Oud": 2.36,
+  "Ibraq (Ibrahim Al Qurashi)": 2.98,
+  "Rasasi": 4.37,
+  "Swiss Arabian": 4.8,
+  "Ajmal": NaN,
+  "Arabian Oud": 4.6
+ },
+ "bands": {
+  "Deraah": {
+   "<1": 0.283,
+   "1-2": 0.588,
+   "2-4": 0.118,
+   "4+": 0.011
+  },
+  "Assaf": {
+   "<1": 0.644,
+   "1-2": 0.337,
+   "2-4": 0.01,
+   "4+": 0.01
+  },
+  "Al Majed Oud": {
+   "<1": 0.406,
+   "1-2": 0.375,
+   "2-4": 0.141,
+   "4+": 0.078
+  },
+  "Ibraq (Ibrahim Al Qurashi)": {
+   "<1": 0.192,
+   "1-2": 0.808,
+   "2-4": 0.0,
+   "4+": 0.0
+  },
+  "Rasasi": {
+   "<1": 0.271,
+   "1-2": 0.276,
+   "2-4": 0.347,
+   "4+": 0.106
+  },
+  "Swiss Arabian": {
+   "<1": 0.091,
+   "1-2": 0.273,
+   "2-4": 0.636,
+   "4+": 0.0
+  },
+  "Ajmal": {
+   "<1": 0.072,
+   "1-2": 0.232,
+   "2-4": 0.449,
+   "4+": 0.246
+  },
+  "Arabian Oud": {
+   "<1": 0.182,
+   "1-2": 0.227,
+   "2-4": 0.318,
+   "4+": 0.273
+  }
+ },
+ "under1": {
+  "Deraah": 0.283,
+  "Assaf": 0.644,
+  "Al Majed Oud": 0.406,
+  "Ibraq (Ibrahim Al Qurashi)": 0.192,
+  "Rasasi": 0.271,
+  "Swiss Arabian": 0.091,
+  "Ajmal": 0.072,
+  "Arabian Oud": 0.182
+ },
+ "med_price_100": {
+  "Deraah": 120.0,
+  "Assaf": 105.0,
+  "Al Majed Oud": 115.0,
+  "Ibraq (Ibrahim Al Qurashi)": 99.0,
+  "Rasasi": 172.5,
+  "Swiss Arabian": NaN,
+  "Ajmal": 230.0,
+  "Arabian Oud": 242.0
+ },
+ "share_promo": {
+  "Deraah": 0.956,
+  "Assaf": 1.0,
+  "Al Majed Oud": 1.0,
+  "Ibraq (Ibrahim Al Qurashi)": 1.0,
+  "Rasasi": 0.908,
+  "Swiss Arabian": 0.905,
+  "Ajmal": 0.771,
+  "Arabian Oud": 0.699
+ },
+ "share_markdown": {
+  "Deraah": 0.956,
+  "Assaf": 0.991,
+  "Al Majed Oud": 1.0,
+  "Ibraq (Ibrahim Al Qurashi)": 1.0,
+  "Rasasi": 0.006,
+  "Swiss Arabian": 0.905,
+  "Ajmal": 0.0,
+  "Arabian Oud": 0.699
+ },
+ "share_bundle": {
+  "Deraah": 0.0,
+  "Assaf": 0.757,
+  "Al Majed Oud": 0.0,
+  "Ibraq (Ibrahim Al Qurashi)": 0.0,
+  "Rasasi": 0.902,
+  "Swiss Arabian": 0.0,
+  "Ajmal": 0.771,
+  "Arabian Oud": 0.0
+ },
+ "eff_disc": {
+  "Deraah": 0.534,
+  "Assaf": 0.669,
+  "Al Majed Oud": 0.5,
+  "Ibraq (Ibrahim Al Qurashi)": 0.5,
+  "Rasasi": 0.333,
+  "Swiss Arabian": 0.5,
+  "Ajmal": 0.25,
+  "Arabian Oud": 0.5
+ },
+ "md_disc": {
+  "Deraah": 0.566,
+  "Assaf": 0.565,
+  "Al Majed Oud": 0.5,
+  "Ibraq (Ibrahim Al Qurashi)": 0.5,
+  "Rasasi": 0.698,
+  "Swiss Arabian": 0.5,
+  "Ajmal": NaN,
+  "Arabian Oud": 0.5
+ },
+ "disc_dist": {
+  "Deraah": {
+   "none": 0.044,
+   "<30": 0.0,
+   "30-45": 0.002,
+   "45-55": 0.464,
+   "55+": 0.49
+  },
+  "Assaf": {
+   "none": 0.0,
+   "<30": 0.009,
+   "30-45": 0.009,
+   "45-55": 0.087,
+   "55+": 0.896
+  },
+  "Al Majed Oud": {
+   "none": 0.0,
+   "<30": 0.0,
+   "30-45": 0.0,
+   "45-55": 1.0,
+   "55+": 0.0
+  },
+  "Ibraq (Ibrahim Al Qurashi)": {
+   "none": 0.0,
+   "<30": 0.0,
+   "30-45": 0.0,
+   "45-55": 0.818,
+   "55+": 0.182
+  },
+  "Rasasi": {
+   "none": 0.092,
+   "<30": 0.0,
+   "30-45": 0.902,
+   "45-55": 0.0,
+   "55+": 0.006
+  },
+  "Swiss Arabian": {
+   "none": 0.095,
+   "<30": 0.0,
+   "30-45": 0.0,
+   "45-55": 0.905,
+   "55+": 0.0
+  },
+  "Ajmal": {
+   "none": 0.229,
+   "<30": 0.771,
+   "30-45": 0.0,
+   "45-55": 0.0,
+   "55+": 0.0
+  },
+  "Arabian Oud": {
+   "none": 0.301,
+   "<30": 0.0,
+   "30-45": 0.018,
+   "45-55": 0.345,
+   "55+": 0.336
+  }
+ },
+ "deraah_above_assaf": 0.74,
+ "deraah_list_over_assaf_sale": null,
+ "subbrands": {
+  "AL GAZIRA": {
+   "size": 4,
+   "median": 0.7,
+   "min": 0.66,
+   "max": 0.83
+  },
+  "H2O": {
+   "size": 28,
+   "median": 1.07,
+   "min": 0.69,
+   "max": 2.58
+  },
+  "RING": {
+   "size": 26,
+   "median": 1.1,
+   "min": 0.69,
+   "max": 2.72
+  },
+  "GINGLE": {
+   "size": 20,
+   "median": 1.11,
+   "min": 0.69,
+   "max": 2.15
+  },
+  "ONE LOVE": {
+   "size": 19,
+   "median": 1.11,
+   "min": 0.69,
+   "max": 3.11
+  },
+  "MAIOS": {
+   "size": 48,
+   "median": 1.11,
+   "min": 0.59,
+   "max": 1.96
+  },
+  "LABEAUTE": {
+   "size": 70,
+   "median": 1.11,
+   "min": 0.89,
+   "max": 1.99
+  },
+  "LINK": {
+   "size": 64,
+   "median": 1.12,
+   "min": 0.53,
+   "max": 1.84
+  },
+  "POUR MOI": {
+   "size": 18,
+   "median": 1.13,
+   "min": 0.34,
+   "max": 2.72
+  },
+  "V.S": {
+   "size": 20,
+   "median": 1.14,
+   "min": 0.69,
+   "max": 2.3
+  },
+  "Q&A": {
+   "size": 11,
+   "median": 1.15,
+   "min": 0.79,
+   "max": 1.93
+  },
+  "CAGE": {
+   "size": 39,
+   "median": 1.19,
+   "min": 0.69,
+   "max": 2.1
+  },
+  "PROUD": {
+   "size": 28,
+   "median": 1.23,
+   "min": 0.46,
+   "max": 2.98
+  },
+  "JADDID": {
+   "size": 8,
+   "median": 1.31,
+   "min": 1.03,
+   "max": 1.69
+  },
+  "DERAAH OUD": {
+   "size": 75,
+   "median": 1.77,
+   "min": 0.79,
+   "max": 5.56
+  },
+  "PAPILLON": {
+   "size": 6,
+   "median": 1.8,
+   "min": 1.8,
+   "max": 1.8
+  },
+  "DERAAH PRIVATE": {
+   "size": 31,
+   "median": 1.92,
+   "min": 0.68,
+   "max": 2.74
+  },
+  "MAISON D'ORIENT": {
+   "size": 10,
+   "median": 2.08,
+   "min": 2.08,
+   "max": 2.6
+  },
+  "MON BOUQUET": {
+   "size": 9,
+   "median": 2.2,
+   "min": 1.11,
+   "max": 2.2
+  }
+ },
+ "n_labels": 19,
+ "n_labels4": 19,
+ "n_band": 13,
+ "deraah_half": 0.464
+}

@@ -1,0 +1,7 @@
+await new Promise(r=>setTimeout(r,2500));
+const t0=Date.now();let last=-1,stable=0;
+while(Date.now()-t0<36000){window.scrollTo(0,document.body.scrollHeight);document.querySelector('salla-infinite-scroll button, .s-infinite-scroll-btn')?.click();await new Promise(r=>setTimeout(r,1500));const n=document.querySelectorAll('custom-salla-product-card, salla-product-card').length;if(n===last){if(++stable>=3)break}else{stable=0;last=n}}
+const num=s=>{const m=(s||'').replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).match(/[\d.,]+/);return m?m[0].replace(/,/g,''):''};
+const rows=[...document.querySelectorAll('custom-salla-product-card, salla-product-card')].map(c=>{const pw=c.querySelector('.product-card__price, .s-product-card-price, [class*=price]');const tp=pw?.querySelector('.total-price, .s-product-card-sale-price h4, [class*=sale-price]');const old=pw?.querySelector('.before-price, del, s, [class*=before], [class*=regular]');const a=c.querySelector('.product-card__title a, .s-product-card-content-title a, h3 a');
+return [c.id.replace('product-',''),a?.textContent.trim(),num(tp?.textContent||''),old?num(old.textContent):num(pw?.textContent),c.querySelector('salla-rating-stars')?.getAttribute('value')||'',c.querySelector('.product-card__promotion, .s-product-card-promotion-title')?.textContent.trim()||'',c.querySelector('.product-card__subtitle, .s-product-card-content-subtitle')?.textContent.trim()||'',decodeURI(a?.href||'')].map(v=>String(v??'').replace(/[\t\n]/g,' ')).join('\t')});
+({page:location.pathname,n:rows.length,tsv:[...new Set(rows)].join('\n')})

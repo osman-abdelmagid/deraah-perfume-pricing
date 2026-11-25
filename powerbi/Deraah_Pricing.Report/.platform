@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Deraah_Pricing"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "69629015-8ed7-4a7a-a090-ed7eb56faf15"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "3ffc81b2b8fc46a3a9cc",
+  "position": {
+    "x": 20,
+    "y": 70,
+    "z": 1000,
+    "height": 300,
+    "width": 1240
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_house"
+                    }
+                  },
+                  "Property": "house_ar"
+                }
+              },
+              "queryRef": "dim_house.house_ar",
+              "nativeQueryRef": "house_ar",
+              "displayName": "الشركة"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Perfumes Priced per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Perfumes Priced per ml",
+              "nativeQueryRef": "Perfumes Priced per ml",
+              "displayName": "عطور محسوب سعر ملها"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Price per ml",
+              "nativeQueryRef": "Median Price per ml",
+              "displayName": "متوسط سعر المل"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "P25 Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.P25 Price per ml",
+              "nativeQueryRef": "P25 Price per ml",
+              "displayName": "الربع الأول"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "P75 Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.P75 Price per ml",
+              "nativeQueryRef": "P75 Price per ml",
+              "displayName": "الربع الثالث"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Price per ml after Bundles"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Price per ml after Bundles",
+              "nativeQueryRef": "Median Price per ml after Bundles",
+              "displayName": "سعر المل بعد الباقات"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Price 100ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Price 100ml",
+              "nativeQueryRef": "Median Price 100ml",
+              "displayName": "سعر عبوة 100 مل"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Share Under 1 SAR per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Share Under 1 SAR per ml",
+              "nativeQueryRef": "Share Under 1 SAR per ml",
+              "displayName": "أقل من ريال للمل"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_perfumes"
+                  }
+                },
+                "Property": "Median Price per ml"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'مؤشرات سعر العطور حسب الشركة (ريال)'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252423'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

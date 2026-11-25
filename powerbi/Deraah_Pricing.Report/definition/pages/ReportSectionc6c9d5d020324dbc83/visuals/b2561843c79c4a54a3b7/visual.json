@@ -1,0 +1,104 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "b2561843c79c4a54a3b7",
+  "position": {
+    "x": 20,
+    "y": 10,
+    "z": 0,
+    "height": 690,
+    "width": 1240
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "المنهجية والحدود",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "المصادر: المتاجر الإلكترونية الرسمية لدرعة وعساف والماجد للعود وإبراق (إبراهيم القرشي) والرصاصي وسويس أرابيان وأجمل والعربية للعود، جُمعت في 25 نوفمبر 2026. يقتصر التحليل على العطور.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "سعر المل = السعر ÷ الحجم لعطور البخاخ المفردة من 20 إلى 300 مل. الحجم من اسم المنتج أو صفحته، ولدرعة من رمز المنتج (تطابق 99.3% مع الحجم المذكور في 411 حالة).",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "الخصم الفعلي: السعر المشطوب أو الشارة = الفرق بين السعرين؛ «3 بسعر 2» = 33%؛ «الثاني بنصف السعر» = 25%؛ وحين يجتمع الشطب والباقة يُحتسب الأثران معاً.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "الماجد للعود: السعر قبل الخصم مشتق من شارة النسبة (تحقق يدوي: 149 ريالاً مع 50% = 298 ريالاً).",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "الحدود: لقطة واحدة من موسم عروض نوفمبر. سويس أرابيان تنشر الحجم لـ11 عطراً فقط. لم يُشمل عبدالصمد القرشي ودخون لتعذّر الوصول إلى متجريهما.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "إعداد: عثمان عبدالماجد",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

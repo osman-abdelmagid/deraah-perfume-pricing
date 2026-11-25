@@ -1,0 +1,8 @@
+relationship 5a23b041-daea-43c9-9ad3-d6b89867e8a8
+	fromColumn: fact_perfumes.house
+	toColumn: dim_house.house
+
+relationship c8a76b6f-2d2b-4321-8031-e4b529eefe41
+	fromColumn: fact_perfumes.ppm_band
+	toColumn: dim_ppm_band.ppm_band
+

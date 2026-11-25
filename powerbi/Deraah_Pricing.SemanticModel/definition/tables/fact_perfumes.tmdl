@@ -1,0 +1,278 @@
+table fact_perfumes
+	lineageTag: 358a8e0f-8555-442f-a428-19cd0e458887
+
+	measure Perfumes = COUNTROWS ( fact_perfumes )
+		formatString: #,0
+		lineageTag: df123165-a667-416f-bd2f-1408d54d15a7
+
+	measure 'Perfumes Priced per ml' = CALCULATE ( COUNTROWS ( fact_perfumes ), NOT ISBLANK ( fact_perfumes[price_per_ml] ) )
+		formatString: #,0
+		lineageTag: 48a1ac06-c961-466d-be04-aebde614399a
+
+	measure 'Median Price per ml' = MEDIAN ( fact_perfumes[price_per_ml] )
+		formatString: 0.00
+		lineageTag: 80d5f02c-0237-45a0-801d-0af18c87e385
+
+	measure 'Median Price per ml after Bundles' = MEDIAN ( fact_perfumes[eff_price_per_ml] )
+		formatString: 0.00
+		lineageTag: 58497628-eb62-4d4b-9544-258aac9e03d0
+
+	measure 'Median List Price per ml' = MEDIAN ( fact_perfumes[list_price_per_ml] )
+		formatString: 0.00
+		lineageTag: 7d4d2573-3d50-47c7-99a8-dac334ad6fc0
+
+	measure 'P25 Price per ml' = PERCENTILEX.INC ( FILTER ( fact_perfumes, NOT ISBLANK ( fact_perfumes[price_per_ml] ) ), fact_perfumes[price_per_ml], 0.25 )
+		formatString: 0.00
+		lineageTag: 5d920693-9846-4d23-a30b-2c611443349d
+
+	measure 'P75 Price per ml' = PERCENTILEX.INC ( FILTER ( fact_perfumes, NOT ISBLANK ( fact_perfumes[price_per_ml] ) ), fact_perfumes[price_per_ml], 0.75 )
+		formatString: 0.00
+		lineageTag: 1e551325-d736-4e73-b4c6-69b1d2d40238
+
+	measure 'Min Price per ml' = MIN ( fact_perfumes[price_per_ml] )
+		formatString: 0.00
+		lineageTag: 40ff793e-c587-492d-ae74-be4366311f28
+
+	measure 'Max Price per ml' = MAX ( fact_perfumes[price_per_ml] )
+		formatString: 0.00
+		lineageTag: 08b3608a-1fac-40d4-aa19-b27dbbb0d250
+
+	measure 'Median Price 100ml' = CALCULATE ( MEDIAN ( fact_perfumes[price_sar] ), fact_perfumes[size_value] = 100, NOT ISBLANK ( fact_perfumes[price_per_ml] ) )
+		formatString: #,0
+		lineageTag: 5a26c87b-5949-4223-ab4c-08da09db5259
+
+	measure 'Share Under 1 SAR per ml' = DIVIDE ( CALCULATE ( [Perfumes], fact_perfumes[price_per_ml] < 1, NOT ISBLANK ( fact_perfumes[price_per_ml] ) ), [Perfumes Priced per ml] )
+		formatString: 0%
+		lineageTag: 597015e7-2c3f-41e4-9a50-2c6ec97ab75c
+
+	measure 'Share Marked Down' = DIVIDE ( CALCULATE ( [Perfumes], fact_perfumes[on_markdown] = TRUE () ), [Perfumes] )
+		formatString: 0%
+		lineageTag: 8bb0af93-e7fe-4258-b18c-42391835b4dc
+
+	measure 'Share with Bundle Offer' = DIVIDE ( CALCULATE ( [Perfumes], fact_perfumes[is_bundle] = TRUE () ), [Perfumes] )
+		formatString: 0%
+		lineageTag: 188ac287-e8dd-49d7-871d-0175fd3b9242
+
+	measure 'Median Markdown Depth' = CALCULATE ( MEDIAN ( fact_perfumes[discount_pct] ), fact_perfumes[on_markdown] = TRUE () )
+		formatString: 0%
+		lineageTag: 552ebd5d-4854-4e20-8b0e-368b21ae88a4
+
+	measure 'Median Effective Discount' = MEDIAN ( fact_perfumes[effective_discount] )
+		formatString: 0%
+		lineageTag: bfac3bca-5e3d-459d-bac9-f619d821018e
+
+	measure 'Share of House Perfumes' = DIVIDE ( [Perfumes Priced per ml], CALCULATE ( [Perfumes Priced per ml], REMOVEFILTERS ( dim_ppm_band ) ) )
+		formatString: 0%
+		lineageTag: 9ec5c6b2-89ea-4419-a66a-55db8a38b47a
+
+	column house
+		dataType: string
+		lineageTag: fdf3b566-394f-4af1-b4fe-2560f48eb722
+		summarizeBy: none
+		sourceColumn: house
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_brand
+		dataType: string
+		lineageTag: 2b0556c0-86e2-4f89-a733-d9089a5a663e
+		summarizeBy: none
+		sourceColumn: sub_brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: f3c46be8-256a-4594-b31a-3348d9d3db27
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: a43952d5-d38b-4522-98c9-b7f737e36172
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column gender
+		dataType: string
+		lineageTag: f9a89958-2bdf-4262-bd03-ac879946c49a
+		summarizeBy: none
+		sourceColumn: gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column size_value
+		dataType: double
+		lineageTag: cf6acb58-5cf5-4edb-87bd-e55f00e7186f
+		summarizeBy: none
+		sourceColumn: size_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column size_unit
+		dataType: string
+		lineageTag: 62fb3d8a-ffe4-429b-bd8e-4f7b1c9d9ba1
+		summarizeBy: none
+		sourceColumn: size_unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column units_in_pack
+		dataType: int64
+		lineageTag: 101e541e-7c2b-49f8-9bf2-e86ba63ab130
+		summarizeBy: none
+		sourceColumn: units_in_pack
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_sar
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a606739a-f9b5-4fbf-81e4-a0092f1ac577
+		summarizeBy: none
+		sourceColumn: price_sar
+
+		annotation SummarizationSetBy = Automatic
+
+	column list_price_sar
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 72493722-910c-4ec2-b77b-a896858a80b2
+		summarizeBy: none
+		sourceColumn: list_price_sar
+
+		annotation SummarizationSetBy = Automatic
+
+	column on_markdown
+		dataType: boolean
+		lineageTag: 9939f026-847f-457d-b420-df320c623b05
+		summarizeBy: none
+		sourceColumn: on_markdown
+
+		annotation SummarizationSetBy = Automatic
+
+	column discount_pct
+		dataType: double
+		formatString: 0%
+		lineageTag: 81861267-3835-4684-a214-c9ed4fa28310
+		summarizeBy: none
+		sourceColumn: discount_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column promo_type
+		dataType: string
+		lineageTag: 5b092dff-4792-4f50-8ff7-b67697711a6b
+		summarizeBy: none
+		sourceColumn: promo_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column effective_discount
+		dataType: double
+		formatString: 0%
+		lineageTag: ad015046-90d4-46f3-8c8c-7dc94ab940e0
+		summarizeBy: none
+		sourceColumn: effective_discount
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_per_ml
+		dataType: double
+		formatString: 0.00
+		lineageTag: 21bc3238-12e8-4f76-bc99-632dd76ee5c0
+		summarizeBy: none
+		sourceColumn: price_per_ml
+
+		annotation SummarizationSetBy = Automatic
+
+	column list_price_per_ml
+		dataType: double
+		formatString: 0.00
+		lineageTag: 4d86fe2c-75a9-4746-bc82-fc5e87813664
+		summarizeBy: none
+		sourceColumn: list_price_per_ml
+
+		annotation SummarizationSetBy = Automatic
+
+	column eff_price_per_ml
+		dataType: double
+		formatString: 0.00
+		lineageTag: 6041b7fe-4a7a-433f-8116-a2296e63c775
+		summarizeBy: none
+		sourceColumn: eff_price_per_ml
+
+		annotation SummarizationSetBy = Automatic
+
+	column ppm_band
+		dataType: string
+		lineageTag: 07126cc7-e464-454b-be06-39012ffd74e7
+		summarizeBy: none
+		sourceColumn: ppm_band
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_band_sar
+		dataType: string
+		lineageTag: 7f211d23-8904-45b8-9703-bb6dee0d46c8
+		summarizeBy: none
+		sourceColumn: price_band_sar
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: 36ff6e65-7603-47d2-b826-96db0292d09e
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column scrape_date
+		dataType: string
+		lineageTag: 3fa25e57-4d93-4c81-8a2a-dcd24ae625da
+		summarizeBy: none
+		sourceColumn: scrape_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column promo_ar
+		dataType: string
+		lineageTag: 2d937e41-09e7-415b-87ea-7d61b65c99af
+		summarizeBy: none
+		sourceColumn: promo_ar
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_bundle
+		dataType: boolean
+		lineageTag: ec4b0362-d8b2-4533-804c-2b71a6016579
+		summarizeBy: none
+		sourceColumn: is_bundle
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_brand_ar
+		dataType: string
+		lineageTag: f2dbc231-c52c-4ad1-8980-53574a29d258
+		summarizeBy: none
+		sourceColumn: sub_brand_ar
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_perfumes = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "fact_perfumes.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"house", type text}, {"sub_brand", type text}, {"product_id", type text}, {"product_name", type text}, {"gender", type text}, {"size_value", type number}, {"size_unit", type text}, {"units_in_pack", Int64.Type}, {"price_sar", type number}, {"list_price_sar", type number}, {"on_markdown", type logical}, {"discount_pct", type number}, {"promo_type", type text}, {"effective_discount", type number}, {"price_per_ml", type number}, {"list_price_per_ml", type number}, {"eff_price_per_ml", type number}, {"ppm_band", type text}, {"price_band_sar", type text}, {"url", type text}, {"scrape_date", type text}, {"promo_ar", type text}, {"is_bundle", type logical}, {"sub_brand_ar", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

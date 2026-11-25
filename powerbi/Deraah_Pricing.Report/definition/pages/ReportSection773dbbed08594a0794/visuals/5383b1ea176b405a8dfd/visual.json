@@ -1,0 +1,235 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "5383b1ea176b405a8dfd",
+  "position": {
+    "x": 20,
+    "y": 70,
+    "z": 2000,
+    "height": 635,
+    "width": 610
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "sub_brand_ar"
+                }
+              },
+              "queryRef": "fact_perfumes.sub_brand_ar",
+              "nativeQueryRef": "sub_brand_ar",
+              "displayName": "العلامة الفرعية"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Perfumes Priced per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Perfumes Priced per ml",
+              "nativeQueryRef": "Perfumes Priced per ml",
+              "displayName": "عطور محسوب سعر ملها"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Price per ml",
+              "nativeQueryRef": "Median Price per ml",
+              "displayName": "متوسط سعر المل"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Min Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Min Price per ml",
+              "nativeQueryRef": "Min Price per ml",
+              "displayName": "أدنى سعر مل"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Max Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Max Price per ml",
+              "nativeQueryRef": "Max Price per ml",
+              "displayName": "أعلى سعر مل"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Markdown Depth"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Markdown Depth",
+              "nativeQueryRef": "Median Markdown Depth",
+              "displayName": "عمق الشطب"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_perfumes"
+                  }
+                },
+                "Property": "Median Price per ml"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'العلامات الفرعية: العدد والسعر'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252423'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "02211ff7a233427ba2d8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_perfumes"
+              }
+            },
+            "Property": "house"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "fact_perfumes",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "f"
+                          }
+                        },
+                        "Property": "house"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Deraah'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  }
+}

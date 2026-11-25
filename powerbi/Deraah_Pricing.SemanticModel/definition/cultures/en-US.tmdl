@@ -1,0 +1,410 @@
+cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "fact_perfumes.median_price_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Median Price per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "متوسط سعر المل": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.share_under_1_sar_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Share Under 1 SAR per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "أقل من ريال للمل": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.median_effective_discount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Median Effective Discount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "الخصم الفعلي": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.perfumes_priced_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Perfumes Priced per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "عطور محسوب سعر ملها": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.p25_price_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "P25 Price per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "الربع الأول": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.p75_price_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "P75 Price per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "الربع الثالث": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.median_price_per_ml_after_bundles": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Median Price per ml after Bundles"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "سعر المل بعد الباقات": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.median_price_100ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Median Price 100ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "سعر عبوة 100 مل": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.sub_brand_ar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "sub_brand_ar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "العلامة الفرعية": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.min_price_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Min Price per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "أدنى سعر مل": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.max_price_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Max Price per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "أعلى سعر مل": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.median_markdown_depth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Median Markdown Depth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "عمق الشطب": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.promo_ar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "promo_ar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "آلية العرض": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.perfumes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Perfumes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "عدد العطور": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.median_list_price_per_ml": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Median List Price per ml"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "سعر المل قبل الخصم": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.share_marked_down": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Share Marked Down"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "بسعر مشطوب": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_perfumes.share_with_bundle_offer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_perfumes",
+			          "ConceptualProperty": "Share with Bundle Offer"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "عليها عرض باقة": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_house.house_ar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_house",
+			          "ConceptualProperty": "house_ar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "الشركة": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_ppm_band.ppm_band_ar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_ppm_band",
+			          "ConceptualProperty": "ppm_band_ar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "شريحة سعر المل (ريال)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

@@ -1,0 +1,207 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "359eaabc58de4259b0e8",
+  "position": {
+    "x": 20,
+    "y": 415,
+    "z": 3000,
+    "height": 290,
+    "width": 1240
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_house"
+                    }
+                  },
+                  "Property": "house_ar"
+                }
+              },
+              "queryRef": "dim_house.house_ar",
+              "nativeQueryRef": "house_ar",
+              "displayName": "الشركة"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Perfumes"
+                }
+              },
+              "queryRef": "fact_perfumes.Perfumes",
+              "nativeQueryRef": "Perfumes",
+              "displayName": "عدد العطور"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Share Marked Down"
+                }
+              },
+              "queryRef": "fact_perfumes.Share Marked Down",
+              "nativeQueryRef": "Share Marked Down",
+              "displayName": "بسعر مشطوب"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Share with Bundle Offer"
+                }
+              },
+              "queryRef": "fact_perfumes.Share with Bundle Offer",
+              "nativeQueryRef": "Share with Bundle Offer",
+              "displayName": "عليها عرض باقة"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Markdown Depth"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Markdown Depth",
+              "nativeQueryRef": "Median Markdown Depth",
+              "displayName": "عمق الشطب"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Effective Discount"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Effective Discount",
+              "nativeQueryRef": "Median Effective Discount",
+              "displayName": "الخصم الفعلي"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median List Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Median List Price per ml",
+              "nativeQueryRef": "Median List Price per ml",
+              "displayName": "سعر المل قبل الخصم"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_perfumes"
+                    }
+                  },
+                  "Property": "Median Price per ml"
+                }
+              },
+              "queryRef": "fact_perfumes.Median Price per ml",
+              "nativeQueryRef": "Median Price per ml",
+              "displayName": "متوسط سعر المل"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_perfumes"
+                  }
+                },
+                "Property": "Median Effective Discount"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'الشطب والباقات والخصم الفعلي'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252423'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

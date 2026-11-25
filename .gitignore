@@ -1,0 +1,5 @@
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+outputs/report.html
+outputs/pbip_generated/
+__pycache__/

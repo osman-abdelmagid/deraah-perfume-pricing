@@ -1,0 +1,89 @@
+table dim_house
+	lineageTag: 59a802ad-f443-463e-819d-2c9a5653076d
+
+	column house
+		dataType: string
+		lineageTag: 8c84a4d2-9e0c-4e0c-936a-c01ba148c17c
+		summarizeBy: none
+		sourceColumn: house
+
+		annotation SummarizationSetBy = Automatic
+
+	column house_ar
+		dataType: string
+		lineageTag: a31b8871-e33c-4efa-8d81-27bf8e11f537
+		summarizeBy: none
+		sourceColumn: house_ar
+		sortByColumn: house_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column house_sort
+		dataType: int64
+		lineageTag: ad8bf494-1413-4309-b537-980f04c92b06
+		summarizeBy: none
+		sourceColumn: house_sort
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_focus
+		dataType: boolean
+		lineageTag: f9afb810-6c3b-49b2-b36c-e572311ea518
+		summarizeBy: none
+		sourceColumn: is_focus
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_share_2022
+		dataType: double
+		formatString: 0.0%
+		lineageTag: 0f4ecdd5-dd4a-452b-b696-acaf269e5cb6
+		summarizeBy: none
+		sourceColumn: market_share_2022
+
+		annotation SummarizationSetBy = Automatic
+
+	column branches_2022
+		dataType: int64
+		lineageTag: 0153a718-68cf-4f07-a193-c7b7994b8023
+		summarizeBy: none
+		sourceColumn: branches_2022
+
+		annotation SummarizationSetBy = Automatic
+
+	column platform
+		dataType: string
+		lineageTag: 15e60187-7f7e-4b48-ae61-8f4ace8ae1f3
+		summarizeBy: none
+		sourceColumn: platform
+
+		annotation SummarizationSetBy = Automatic
+
+	column store_url
+		dataType: string
+		lineageTag: db50f63e-9bbc-43ec-b14e-b5d60bc6bdf8
+		summarizeBy: none
+		sourceColumn: store_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column promo_model
+		dataType: string
+		lineageTag: 6148243e-fa13-4dfc-89f5-935416f6ad52
+		summarizeBy: none
+		sourceColumn: promo_model
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_house = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(DataFolder & "dim_house.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Promoted, {{"house", type text}, {"house_ar", type text}, {"house_sort", Int64.Type}, {"is_focus", type logical}, {"market_share_2022", type number}, {"branches_2022", Int64.Type}, {"platform", type text}, {"store_url", type text}, {"promo_model", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table
+

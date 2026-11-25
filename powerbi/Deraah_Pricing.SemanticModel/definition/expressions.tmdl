@@ -1,0 +1,5 @@
+expression DataFolder = "C:\Users\USER\Documents\Projects\deraah_market_analysis\deraah-perfume-pricing\data\powerbi\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: c6137470-6809-4f11-9863-0ec505cc11d7
+
+	annotation PBI_ResultType = Text
+

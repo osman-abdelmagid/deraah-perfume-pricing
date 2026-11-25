@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.15.0/schema.json",
+  "name": "a166f7b40a1f4dbf8ef9",
+  "position": {
+    "x": 20,
+    "y": 10,
+    "z": 0,
+    "height": 75,
+    "width": 1240
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "درعة مقابل المنافسين: أسعار العطور وعروضها",
+                    "textStyle": {
+                      "fontSize": "20pt",
+                      "fontWeight": "bold"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "1,223 عطراً من المتاجر الإلكترونية لثماني شركات، 25 نوفمبر 2026. درعة بالأزرق وعساف بالأحمر. سعر المل لعطور البخاخ المفردة من 20 إلى 300 مل.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "right"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
